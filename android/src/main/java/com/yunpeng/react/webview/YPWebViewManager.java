@@ -38,7 +38,6 @@ public class YPWebViewManager extends ReactWebViewManager {
   }
 
   @ReactProp(name = "initialScale")
-  @Override
   public void setInitialScale(WebView view, int initialScale) {
     view.setInitialScale(initialScale);
     view.getSettings().setUseWideViewPort(true);
