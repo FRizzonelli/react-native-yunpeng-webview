@@ -29,13 +29,10 @@
     [super webViewDidFinishLoad:webView];
     if (self.scalesPageToFit) {
         [webView.scrollView setZoomScale:1.0f animated:NO];
-        CGSize fsize = webView.frame.size;
-        CGSize size = webView.scrollView.contentSize;
-        double scale = fsize.width / size.width;
-        if (scale < 1.0 && scale > 0.0) {
-            webView.scrollView.minimumZoomScale = scale;
-            [webView.scrollView setZoomScale:scale animated:NO];
-        }
+
+        double scale = 1.13f;
+        webView.scrollView.minimumZoomScale = scale;
+        [webView.scrollView setZoomScale:scale animated:NO];
     }
 }
 @end
