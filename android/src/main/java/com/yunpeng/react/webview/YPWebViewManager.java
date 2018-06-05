@@ -37,17 +37,10 @@ public class YPWebViewManager extends ReactWebViewManager {
     }
   }
 
-  // @ReactProp(name = "scalesPageToFit")
-  // @Override
-  // public void setScalesPageToFit(WebView view, boolean enabled) {
-  //   view.getSettings().setUseWideViewPort(enabled);
-  //   view.getSettings().setLoadWithOverviewMode(enabled);
-  // }
-
   @ReactProp(name = "initialScale")
   @Override
-  public void setInitialScale(WebView view, float initialScale) {
-    view.setInitialScale(76);
+  public void setInitialScale(WebView view, int initialScale) {
+    view.setInitialScale(initialScale);
     view.getSettings().setUseWideViewPort(true);
     view.getSettings().setLoadWithOverviewMode(true);
   }  
